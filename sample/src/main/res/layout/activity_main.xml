@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    tools:context="link.fls.swipestacksample.MainActivity">
+
+    <Button
+        android:id="@+id/buttonSwipeLeft"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/swipe_left" />
+
+    <Button
+        android:id="@+id/buttonSwipeRight"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/swipe_right" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:background="#f0f" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/view1"
+        android:background="#86f" />
+
+    <!--<FrameLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true">-->
+
+
+    <!--</FrameLayout>-->
+    <TextView
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/swipeStack"
+        android:text="啊哈哈啊哈哈哈哈啊哈哈啊啊哈哈啊哈哈哈哈啊哈哈啊哈哈啊哈哈哈哈啊哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈哈哈啊哈哈哈哈啊哈哈哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈哈哈啊哈哈哈哈啊哈哈哈哈哈哈哈哈啊哈哈哈哈啊哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈哈哈啊哈哈哈哈啊哈哈哈哈哈哈啊哈哈哈哈啊哈哈哈哈啊哈哈哈哈哈哈啊哈哈哈哈啊哈哈哈哈哈哈" />
+
+    <link.fls.swipestack.SwipeStack
+        android:id="@+id/swipeStack"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/view2"
+        android:layout_margin="15dp"
+        app:disable_hw_acceleration="true"
+        app:scale_factor="1"
+        app:stack_rotation="-4"
+        android:elevation="5dp"
+        app:stack_size="3"
+        app:stack_spacing="0dp" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_margin="@dimen/margin_fab"
+            android:src="@drawable/ic_content_add"
+            app:fabSize="normal" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</RelativeLayout>
